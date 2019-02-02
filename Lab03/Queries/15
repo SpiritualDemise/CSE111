@@ -1,0 +1,4 @@
+SELECT n_name, SUBSTR(o_orderdate,1,4), COUNT(o_orderpriority)
+FROM nation, supplier, orders
+WHERE s_nationkey = n_nationkey AND o_orderpriority = "3-MEDIUM"
+GROUP BY n_name, o_orderdate, o_orderpriority;

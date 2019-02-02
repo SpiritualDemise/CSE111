@@ -1,0 +1,3 @@
+SELECT DISTINCT(r_name)
+FROM customer, region, orders, lineitem
+WHERE c_nationkey = r_regionkey AND l_shipdate LIKE "1996-12-__" AND c_custkey = o_custkey;
